@@ -2,12 +2,15 @@
 <html>
 <head>
     <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <img id="m1" src="profile.png" alt="">
-    <a href="https://www.upwork.com"><img id="m2" src="upwork.png" alt=""></a>
-    <a href="https://discord.gg/J55saFuq"><img id="m3" src="discord.png" alt=""></a>
-    <h1 id="t1">I make websites for blox fruits crews. <br> Contact me for more info</h1>
+    <div class="container">
+        <img id="m1" src="profile.png" alt="">
+        <a href="https://www.upwork.com"><img id="m2" src="upwork.png" alt=""></a>
+        <a href="https://discord.gg/J55saFuq"><img id="m3" src="discord.png" alt=""></a>
+        <h1 id="t1">I make websites for blox fruits crews. <br> Contact me for more info</h1>
+    </div>
 </body>
 </html>
 <style>
@@ -15,34 +18,58 @@
         background-image: url('back.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+        margin: 0;
+        padding: 0;
     }
+
+    .container {
+        text-align: center;
+        max-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
     #m1 {
-        height: 200px;
-        width: 220px;
-        border-radius: 60px;
-        position: relative;
-        left: 530px;
-        top: 130px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        margin: 0 auto;
     }
+
     #t1 {
         text-align: center;
-        position: relative;
-        top: 120px;
         color: white;
         font-family: cursive;
+        margin-top: 20px;
     }
-    #m2 {
-        height: 60px;
-        width: 60px;
-        position: relative;
-        left: 530px;
-        top: 150px;
+
+    #m2, #m3 {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
     }
-    #m3 {
-        height: 60px;
-        width: 60px;
-        position: relative;
-        left: 180px;
-        top: 150px;
+
+    @media (min-width: 768px) { /* Adjust for larger screens */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #m1 {
+            width: 220px;
+            height: 200px;
+            margin: 0;
+        }
+
+        #t1 {
+            font-size: 24px;
+            margin-top: 30px;
+        }
+
+        #m2, #m3 {
+            width: 60px;
+            height: 60px;
+            margin-top: 30px;
+        }
     }
 </style>
